@@ -1,6 +1,11 @@
+import chefIcon from '/src/assets/icons/Chef Claude Icon.png' 
+
 function Header() {
     return (
-        <h1>hlloooooooo</h1>
+        <header className="header">
+            <img src={chefIcon} alt="chef icon" className="chef-icon" />
+            <h1 className="header-title">Chef Claude</h1>
+        </header>
     )
 }
 
