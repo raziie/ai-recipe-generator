@@ -6,6 +6,8 @@ body {
   margin: 0;
   font-family: Inter, sans-serif;
   color: #141413;
+  font-size: 14px;
+  background: #FAFAF8;
 }
 
 .header {
@@ -19,7 +21,7 @@ body {
 
 .chef-icon {
   margin-right: 11px;
-  width: 43px;
+  width: 45px;
 }
 
 .header-title {
@@ -28,4 +30,62 @@ body {
   letter-spacing: -1px;
   line-height: 60px;
   margin: 0;
+}
+
+main {
+  padding: 65px;
+}
+
+.ingredient-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.ingredient-form>input {
+  flex-grow: 2;
+  min-width: 150px;
+  max-width: 400px;
+  border: 1px solid #D1D5DB;
+  box-shadow: 0px 1px 2px 0px #0000000D;
+  background: #FFFFFF;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.ingredient-form>input:focus {
+  border-color: #141413;
+}
+
+.ingredient-form>input::placeholder {
+  font-size: 14px;
+  color: #6B7280;
+  font-family: Inter, sans-serif;
+}
+
+.ingredient-form>button {
+  flex-grow: 1;
+  max-width: 250px;
+  min-width: 150px;
+  background: #141413;
+  box-shadow: 0px 1px 2px 0px #0000000D;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #FAFAF8;
+  border: 1px solid transparent;
+  transition: 0.5s ease;
+  font-family: Inter, sans-serif;
+}
+
+.ingredient-form>button::before {
+  content: "+";
+  margin-right: 5px;
+}
+
+.ingredient-form>button:hover {
+  background: #FAFAF8;
+  color: #141413;
+  border-color: #141413;
 }
