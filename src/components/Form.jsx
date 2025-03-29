@@ -1,7 +1,7 @@
-function Form() {
+function Form(props) {
     return (
-        <form className="ingredient-form" action="">
-            <input type="text" placeholder="e.g. oregano" aria-label="Add ingredient" />
+        <form onSubmit={props.handleSubmit} className="ingredient-form" action="">
+            <input name="ingredient" type="text" placeholder="e.g. oregano" aria-label="Add ingredient" />
             <button type="submit">Add ingredient</button>
         </form>
     )
