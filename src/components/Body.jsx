@@ -1,4 +1,5 @@
 import Form from './Form'
+import Ingredients from './Ingredients'
 import { useState } from 'react'
 
 function Body() {
@@ -7,22 +8,21 @@ function Body() {
         <li key={ingredient}>{ingredient}</li>
     )
 
-    function handleSubmit(event) {
-        event.preventDefault()
-        // const inputIngredient = event.target.ingredient.value
-        const formData = new FormData(event.currentTarget)
+    function addIngredient(formData) {
         const inputIngredient = formData.get("ingredient") 
-        setIngredients(prevIngredients => [...prevIngredients, inputIngredient])
+        if (inputIngredient) {
+            setIngredients(prevIngredients => [...prevIngredients, inputIngredient])
+        }
     }
 
     return (
         <main>
             <Form
-            handleSubmit = {handleSubmit}
+            action={addIngredient}
             />
-            <ul>
-                {ingredientsItems}
-            </ul>
+            {ingredientsItems.length > 0 && <Ingredients
+            ingredientList={ingredientsItems}
+            />}
         </main>
     )
 }

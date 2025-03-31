@@ -1,6 +1,6 @@
 function Form(props) {
     return (
-        <form onSubmit={props.handleSubmit} className="ingredient-form" action="">
+        <form action={props.action} className="ingredient-form">
             <input name="ingredient" type="text" placeholder="e.g. oregano" aria-label="Add ingredient" />
             <button type="submit">Add ingredient</button>
         </form>
