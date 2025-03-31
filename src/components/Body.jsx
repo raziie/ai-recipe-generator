@@ -1,12 +1,12 @@
 import Form from './Form'
 import Ingredients from './Ingredients'
+import Recipe from './Recipe'
+import { getRecipeFromMistral } from '../AI'
 import { useState } from 'react'
 
 function Body() {
     const [ingredients, setIngredients] = useState([])
-    const ingredientsItems = ingredients.map((ingredient) => 
-        <li key={ingredient}>{ingredient}</li>
-    )
+    const [recipe, setRecipe] = useState("")
 
     function addIngredient(formData) {
         const inputIngredient = formData.get("ingredient") 
@@ -15,14 +15,21 @@ function Body() {
         }
     }
 
+    async function getRecipe() {
+        const generatedRecipe = await getRecipeFromMistral(ingredients)
+        setRecipe(generatedRecipe)
+    }
+
     return (
         <main>
             <Form
             action={addIngredient}
             />
-            {ingredientsItems.length > 0 && <Ingredients
-            ingredientList={ingredientsItems}
+            {ingredients.length > 0 && <Ingredients
+                ingredients={ingredients}
+                getRecipe={getRecipe}
             />}
+            {recipe && <Recipe recipe={recipe}/>}
         </main>
     )
 }
