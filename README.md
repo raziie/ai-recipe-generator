@@ -66,6 +66,18 @@ Update your `.env` file or environment settings accordingly.
 - npm 
 - An API key or endpoint for your AI model
 
+### Environment Setup
+
+To run this app, create a `.env` file in the root and add your API key:
+
+```env
+VITE_HF_ACCESS_TOKEN=your_token_here
+```
+or
+```env
+ANTHROPIC_API_KEY=your_token_here
+```
+
 ### Installation
 
 ```bash
@@ -74,29 +86,6 @@ cd ai-recipe-generator
 npm install
 npm run dev
 ```
----
-
-## 📦 Folder Structure
-
-```
-screeshots/
-└── styles/generated-recipe.png
-src/
-├── assets/
-    └── icons/
-        └── Chef Claude Icon.png
-├── components/
-    ├── Body.jsx
-    ├── Form.jsx
-    ├── Header.jsx
-    ├── Ingredients.jsx
-│   └── Recipe.jsx
-├── AI.js
-├── App.jsx
-├── index.css
-└── main.jsx
-```
-
 ---
 
 ## 🧠 Future Improvements
