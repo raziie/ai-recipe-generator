@@ -6,7 +6,7 @@ You are an assistant that receives a list of ingredients that a user has and sug
 `
 
 // const anthropic = new Anthropic({
-//     // Make sure you set an environment variable in Scrimba 
+//     // Make sure you set an environment variable 
 //     // for ANTHROPIC_API_KEY
 //     apiKey: process.env.ANTHROPIC_API_KEY,
 //     dangerouslyAllowBrowser: true,
@@ -26,7 +26,7 @@ You are an assistant that receives a list of ingredients that a user has and sug
 //     return msg.content[0].text
 // }
 
-// Make sure you set an environment variable in Scrimba 
+// Make sure you set an environment variable 
 // for HF_ACCESS_TOKEN
 const hf = new HfInference(import.meta.env.VITE_HF_ACCESS_TOKEN)
 
