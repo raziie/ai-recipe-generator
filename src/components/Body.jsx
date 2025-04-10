@@ -3,10 +3,17 @@ import Ingredients from './Ingredients'
 import Recipe from './Recipe'
 import { getRecipeFromMistral } from '../AI'
 import { useState } from 'react'
+import { useRef } from 'react'
+import { useEffect } from 'react'
 
 function Body() {
     const [ingredients, setIngredients] = useState([])
     const [recipe, setRecipe] = useState("")
+    const recipeSection = useRef(null)
+
+    useEffect(() => {
+        if (recipe && recipeSection.current) recipeSection.current.scrollIntoView({behavior: "smooth"})
+    }, [recipe])
 
     function addIngredient(formData) {
         const inputIngredient = formData.get("ingredient") 
@@ -28,6 +35,7 @@ function Body() {
             {ingredients.length > 0 && <Ingredients
                 ingredients={ingredients}
                 getRecipe={getRecipe}
+                ref={recipeSection}
             />}
             {recipe && <Recipe recipe={recipe}/>}
         </main>
