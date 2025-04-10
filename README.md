@@ -40,15 +40,20 @@ You are an assistant that receives a list of ingredients that a user has and sug
 
 ### 🔐 Environment Variables
 
-Be sure to define your API keys:
+To use this app, you need access to an AI model API. You can sign up and get your free or personal API key from one of the following providers:
+[Hugging Face](https://huggingface.co)
+
+[Anthropic Claude](https://claude.ai)
+
+Once you have your key, create a .env file in the root of your project and add the appropriate token:
 
 ```env
-VITE_HF_ACCESS_TOKEN=your_huggingface_token
-ANTHROPIC_API_KEY=your_anthropic_token
+# For Hugging Face API
+VITE_HF_ACCESS_TOKEN=your_huggingface_token_here
+
+# Optional: for Claude (Anthropic) API
+VITE_ANTHROPIC_API_KEY=your_claude_api_key_here
 ```
-
-Update your `.env` file or environment settings accordingly.
-
 ---
 
 ## 📸 Screenshots
