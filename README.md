@@ -54,7 +54,9 @@ Update your `.env` file or environment settings accordingly.
 ## 📸 Screenshots
 
 ### 🔹 AI-Generated Recipe
-![Generated Recipe](./screenshots/generated-recipe.png)
+<p align="center">
+  <img src="./screenshots/generated-recipe.png" width="600" />
+</p>
 
 ---
 
@@ -65,18 +67,6 @@ Update your `.env` file or environment settings accordingly.
 - Node.js
 - npm 
 - An API key or endpoint for your AI model
-
-### Environment Setup
-
-To run this app, create a `.env` file in the root and add your API key:
-
-```env
-VITE_HF_ACCESS_TOKEN=your_token_here
-```
-or
-```env
-ANTHROPIC_API_KEY=your_token_here
-```
 
 ### Installation
 
@@ -90,7 +80,6 @@ npm run dev
 
 ## 🧠 Future Improvements
 
-- Add option to choose cuisine type  
 - Export recipes as PDF or text  
 - Add image suggestions via AI  
 - Voice input for ingredients
